@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTMERCH Landing Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="warpper" style="overflow: hidden;">
+        <div class="wrapper" style="overflow: hidden;">
+            <!-- Navbar (Block 1) -->
+            <nav class="navbar">
+                <div class="container">
+                    <!-- Logo and Text -->
+                    <a class="navbar-brand" href="#" style="position: relative; left: -10vw;">
+                        <img src="./assets/Logo/Valuetainment.svg" alt="VTMERCH" style="width: 4vw; height: auto; filter: invert(100%);">
+                        <span style="color: white; font-family: 'Montserrat', sans-serif; font-size: 6vw; font-weight: 800; letter-spacing: 1vw;">
+                        VTMERCH
+                    </span>
+                    </a>
+
+                    <!-- Hamburger Menu -->
+                    <div class="hamburger-menu">
+                        <div class="hamburger-icon" onclick="toggleMenu()">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="dropdown-menu" id="dropdownMenu">
+                            <a href="#">Home</a>
+                            <a href="#">Shop</a>
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <script>
+                function toggleMenu() {
+                    var menu = document.getElementById("dropdownMenu");
+                    if (menu.style.display === "block") {
+                        menu.style.display = "none";
+                    } else {
+                        menu.style.display = "block";
+                    }
+                }
+            </script>
+
+            <!-- Block 2: Main Section -->
+            <div id="mainSection" class="container-fluid bg-danger text-white d-flex justify-content-center align-items-center" style="height: 100vh;">
+                <div>
+                    <h1 id="mainHeading" class="text-center" style="font-family: 'Act of Rejection'; font-size: 8vw; font-weight: 400; opacity: 0.7; position: relative; left: -3vw;">Future looks bright!</h1>
+
+                    <div id="productContainer" class="d-flex justify-content-center flex-wrap" style="position: relative; top: -10vh;">
+                        <div class="photo-container me-2" style="font-family: 'Inter';">
+                            <img src="./assets/img/img (9).png" alt="Product" class="img-fluid rounded" style="width: 20vw; height: auto; object-fit: cover;">
+                            <p class="text-center" style="margin-top: 1vh; position: relative; left: -2.5vw;">
+                                <span style="font-family: 'Inter'">Green Active Short Sleeve</span>
+                                <span style="position: relative; top: 3vh; left: -9vw;">$34.94</span>
+                                <span style="text-decoration: line-through; position: relative; top: 3vh; left: -8vw;">$34.95</span>
+                            </p>
+                        </div>
+                        <div class="photo-container ms-2">
+                            <img src="./assets/img/img (10).png" alt="Product" class="img-fluid rounded" style="width: 20vw; height: 20vw; object-fit: cover; position: relative; left: 1vw;">
+                            <p class="text-center" style="margin-top: 1vh; position: relative; left: -2vw;">
+                                <span style="font-family: 'Inter'">Green Active Short Sleeve</span>
+                                <span style="position: relative; top: 3vh; left: -9vw;">$34.94</span>
+                                <span style="text-decoration: line-through; position: relative; top: 3vh; left: -8vw;">$34.95</span>
+                            </p>
+                        </div>
+                        <div class="photo-container ms-2">
+                            <img src="./assets/img/img (11).jpeg" alt="Product" class="img-fluid rounded" style="width: 20vw; height: 20vw; object-fit: cover; position: relative; left: 3vw;">
+                            <p class="text-center" style="margin-top: 1vh; position: relative; left: -0.25vw;">
+                                <span style="font-family: 'Inter'">Green Active Short Sleeve</span>
+                                <span style="position: relative; top: 3vh; left: -9vw;">$34.94</span>
+                                <span style="text-decoration: line-through; position: relative; top: 3vh; left: -8vw;">$34.95</span>
+                            </p>
+                        </div>
+                        <div class="photo-container ms-2">
+                            <img src="./assets/img/img (11).png" alt="Product" class="img-fluid rounded" style="width: 20vw; height: 20vw; object-fit: cover; position: relative; left: 5vw;">
+                            <p class="text-center" style="margin-top: 1vh; position: relative; left: 2vw;">
+                                <span style="font-family: 'Inter'">Green Active Short Sleeve</span>
+                                <span style="position: relative; top: 3vh; left: -9vw;">$34.94</span>
+                                <span style="text-decoration: line-through; position: relative; top: 3vh; left: -8vw;">$34.95</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JavaScript for Scroll-triggered Animations -->
+            <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+            <script>
+                ScrollReveal().reveal('#mainHeading', {
+                    distance: '50px',
+                    duration: 1000,
+                    origin: 'bottom',
+                    opacity: 0,
+                    easing: 'ease-in-out'
+                });
+
+                ScrollReveal().reveal('#productContainer .photo-container', {
+                    distance: '50px',
+                    duration: 1000,
+                    origin: 'bottom',
+                    opacity: 0,
+                    interval: 200,
+                    easing: 'ease-in-out'
+                });
+            </script>
+        </div>
+</body>
+
+</html>
+
+<!-- Block 3: BUY 1 GET 1 FREE -->
+<div id="offerSection" class="container-fluid bg-white py-5">
+    <h1 id="main-heading" class="text-left" style="color: #000000; font-family: 'Montserrat', sans-serif; font-size: 70px; letter-spacing: 0.5px; margin-left: 100px; margin-top: 20px;">BUY 1 GET 1 FREE</h1>
+    <h1 id="sub-heading" class="text-left" style="font-family: 'Montserrat', sans-serif; font-size: 70px; letter-spacing: 0.5px; margin: 0; white-space: nowrap; margin-left: 100px;">
+        <span style="color: #000000;">ON</span>
+        <span style="color: #FFFFFF; text-shadow: 1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000;">BEST SELLING PRODUCTS</span>
+    </h1>
+
+    <div id="cardContainer" class="container my-5">
+        <div class="row" style="position: relative; top: 2em;">
+            <div class="col-md-3">
+                <div id="card-1" class="card" style="width: 24.177em; height: 28.625em; position:relative; left: -12.5em">
+                    <img src="./assets/img/img (4).jpeg" class="card-img-top" alt="Card 1">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-family: 'Inter', sans-serif; font-size: 0.9375em; font-weight: bold;">
+                            Army Green Active Short Sleeve
+                        </h5>
+                        <p class="card-text" style="font-weight: 600; font-size: 1em;">
+                            $34.95 <span style="text-decoration: line-through; position: relative; left: 0.75em; color: #9B9B9B">$34.95</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="card-2" class="card" style="width: 24.177em; height: 28.625em; position: relative; left: -8em">
+                    <img src="./assets/img/img (6).jpeg" class="card-img-top" alt="Card 2">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-family: 'Inter', sans-serif; font-size: 0.9375em; font-weight: bold;">
+                            Army Green Active Short Sleeve
+                        </h5>
+                        <p class="card-text" style="font-weight: 600; font-size: 1em;">
+                            $34.95 <span style="text-decoration: line-through; position: relative; left: 0.75em; color: #9B9B9B">$34.95</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="card-3" class="card" style="width: 24.177em; height: 28.625em; position: relative; left: -3em">
+                    <img src="./assets/img/img (7).jpeg" class="card-img-top" alt="Card 3">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-family: 'Inter', sans-serif; font-size: 0.9375em; font-weight: bold;">
+                            Army Green Active Short Sleeve
+                        </h5>
+                        <p class="card-text" style="font-weight: 600; font-size: 1em;">
+                            $34.95 <span style="text-decoration: line-through; position: relative; left: 0.75em; color: #9B9B9B">$34.95</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="card-4" class="card" style="width: 24.177em; height: 28.625em; position: relative; left: 2em">
+                    <img src="./assets/img/img (10).jpeg" class="card-img-top" alt="Card 4">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-family: 'Inter', sans-serif; font-size: 0.9375em; font-weight: bold;">
+                            Army Green Active Short Sleeve
+                        </h5>
+                        <p class="card-text" style="font-weight: 600; font-size: 1em;">
+                            $34.95 <span style="text-decoration: line-through; position: relative; left: 0.75em; color: #9B9B9B">$34.95</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+<script>
+    ScrollReveal().reveal('#main-heading', {
+        distance: '50px',
+        duration: 1000,
+        origin: 'left',
+        opacity: 0,
+        easing: 'ease-in-out'
+    });
+
+    ScrollReveal().reveal('#sub-heading', {
+        distance: '50px',
+        duration: 1000,
+        origin: 'left',
+        opacity: 0,
+        delay: 300,
+        easing: 'ease-in-out'
+    });
+
+    ScrollReveal().reveal('#cardContainer .card', {
+        distance: '50px',
+        duration: 1000,
+        origin: 'bottom',
+        opacity: 0,
+        interval: 200,
+        easing: 'ease-in-out'
+    });
+</script>
+
+<!--Patrick Bet-david's Section-->
+<div id="collectionSection" class="container-fluid bg-black py-5">
+    <div class="row">
+        <!-- First Grid -->
+        <div class="col-lg-6 text-white">
+            <h1 id="main-heading" class="mb-3" style="font-family: 'Montserrat', sans-serif; font-size: 3.0625em; line-height: 3.6875em; position: relative; top: 0.5em; left: 2em;">
+                PATRICK BET-DAVID'S
+            </h1>
+
+            <div id="text-container" class="mb-3" style="position: relative; top: -2.875em; left: 6.25em;">
+                <div id="signed-text" class="text-uppercase" style="font-family: 'Montserrat', sans-serif; font-size: 4.375em; font-weight: bold; background: linear-gradient(to bottom, #DE2A2F, #EF5256); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    SIGNED
+                </div>
+
+                <div id="collection-text" class="text-uppercase" style="font-family: 'Montserrat', sans-serif; position: relative; top: -0.3em; font-size: 4.375em; font-weight: bold; background: linear-gradient(to bottom, #DE2A2F, #EF5256); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    COLLECTION
+                </div>
+            </div>
+            <a id="shop-now-btn" href="#" class="btn mb-3" style="font-family: 'Inter', sans-serif; font-size: 1em; font-weight: bold; color: black; background-color: white; border-radius: 0.75em; border: 0.125em solid black; padding: 0.625em 1.25em; display: inline-flex; align-items: center; position: relative; left: 6.25em; top: -10.25em;">
+                SHOP NOW
+                <span style="font-size: 1.25em; display: inline-block; margin-left: 0.625em;">
+                    &#8594;
+                </span>
+            </a>
+
+            <img id="signature-img" src="./assets/img/pat-signature White 1.png" alt="Signature" style="width: 47.125em; height: 13.9375em; position: relative; margin-bottom: 5em; top: 3.25em; left: -6.5em; object-fit: cover;">
+        </div>
+        <!-- Second Grid -->
+        <div class="col-lg-6 d-flex">
+            <div id="image-1-container" class="me-3">
+                <img id="image-1" src="./assets/img/img (1).png" alt="Image 1" style="width: 23.125em; height: 36.75em; object-fit: cover; position: relative; top: 3em">
+            </div>
+            <div id="image-2-container">
+                <img id="image-2" src="./assets/img/img (8).png" alt="Image 2" style="width: 25.25em; height: 32.375em; object-fit: cover; position: relative; top: 5em">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Gradient Background Div -->
+<div class="container-fluid" id="animated-section" style="background: linear-gradient(to right, #EC3339, #BB1117); padding: 3.75em 0;">
+    <div class="row">
+        <!-- First Grid: Quotes and Text -->
+        <div class="col-lg-6 text-white">
+            <img id="quotes-icon" src="./assets/icon/quotes.svg" alt="Quotes" style="width: 13.8125em; height: 13.8125em; position: relative; left: 4.1875em; bottom: -1.25em;">
+            <div id="text-container" class="mt-4" style="position: relative; top: -5.625em; left: 7.5em;">
+                <p class="text-line mb-2" style="font-family: 'Montserrat'; font-weight: bold; font-size: 3em; white-space: nowrap">
+                    OUR MISSION IS TO ENLIGHTEN, ENTERTAIN
+                </p>
+                <p class="text-line mb-2" style="font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 3em; white-space: nowrap;">
+                    AND EMPOWER CURRENT AND FUTURE
+                </p>
+                <p class="text-line mb-2" style="font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 3em; white-space: nowrap;">
+                    LEADERS AROUND THE WORLD.
+                </p>
+            </div>
+        </div>
+        <!-- Second Grid: Image -->
+        <div class="col-lg-6 d-flex justify-content-end align-items-center position-relative">
+            <img id="main-image" src="./assets/img/img (5).png" alt="Image" style="width: 35.6875em; height: 45.3125em; position: absolute; right: 6.25em; bottom: -3.75em;">
+        </div>
+    </div>
+</div>
+
+
+<!-- Shop Collection Section-->
+<!-- Gradient Background Div -->
+<div id="shop-collection-section" class="container-fluid" style="background: linear-gradient(to bottom, #2C2A2A, black); padding: 5.625em 0;">
+    <div class="row">
+        <!-- Upper Part: SHOP and COLLECTION -->
+        <div id="shop-collection-header" class="col-12 text-white text-start mb-4" style="margin-top: 1.875em; margin-left: 3.75em; position: relative; left: -15em">
+            <h2 id="shop-title" style="font-family: 'Montserrat', sans-serif; font-size: 4.375em; font-weight: 500; position: relative; left: 4.375em;">
+                SHOP
+            </h2>
+            <h2 id="collection-title" style="font-family: 'Montserrat', sans-serif; font-size: 4.375em; font-weight: 500; position: relative; left: 4.375em; color: #1C1C1C; -webkit-text-stroke: 0.03125em white;">
+                COLLECTION
+            </h2>
+            <a id="view-all-btn" href="#" class="btn mb-3" style="font-family: 'Inter', sans-serif; font-size: 1em; font-weight: bold; color: black; background-color: white; border-radius: 0.75em; border: 0.125em solid black; padding: 0.4375em 1.875em; display: inline-flex; align-items: center; position: relative; left: 19em; top: 1.875em;">
+                <span>VIEW ALL</span>
+                <span id="arrow-icon" style="font-size: 1.25em; display: inline-block; margin-left: 0.9375em;">&#8594;</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Logo on Right -->
+        <div id="logo-container" class="col-lg-6 d-flex justify-content-start align-items-start rounded">
+            <img id="logo-img" src="./assets/Logo/Valuetainment.svg" alt="Logo" style="width: 43.75em; height: 43.75em; margin-top: -14.375em; margin-left: -2.1875em; filter: invert(100%) opacity(0.050); position: relative; top: -9.375em;">
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Lower Part: Four Image Grids Side by Side -->
+        <div id="grid-item-1" class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <div class="position-relative">
+                <img id="boss-collection-img" src="./assets/img/img (3).jpeg" alt="The Boss Collection" class="rounded" style="width: 23.1875em; height: 33.1875em; object-fit: cover; margin-top: -16.25em; margin-left: 8.125em; position: relative; top: -9.375em;">
+                <!-- Text on the bottom left -->
+                <div id="boss-collection-text" class="position-absolute bottom-0 start-0 text-white" style="padding: 0.625em;">
+                    <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 2em; position: relative; left: 4.75em; top: 0.9375em;">
+                        THE BOSS
+                        <span style="position: relative; top: 1em; left: -5.75em;">COLLECTION</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <div id="grid-item-2" class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <div class="d-flex flex-column">
+                <div id="headwear-img-container" class="mb-2 position-relative" style="margin-top: -19.75em;">
+                    <img id="headwear-img" src="./assets/img/img (7).png" alt="Head Wear" class="rounded" style="width: 26.5em; height: 17.666em; margin-left: 2.8125em; object-fit: cover; position: relative; top: -9.375em; opacity: 0.9;">
+                    <div id="headwear-text" class="position-absolute bottom-0 start-0 text-white" style="padding: 0.625em; position: relative; z-index: 1;">
+                        <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 2em; position: relative; left: 2.75em; top: 2.5em; z-index: 2;">HEADWEAR</h4>
+                    </div>
+                </div>
+
+                <div id="value-books-container" class="position-relative">
+                    <img id="value-books-img" src="./assets/img/img (2).png" alt="Value Books" class="rounded" style="width: 26.5em; height: 17.666em; object-fit: cover; margin-left: 2.8125em; margin-top: 0.9375em; position: relative; top: -9.375em; opacity: 0.9;">
+                    <h4 id="value-books-text" style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 2em; position: relative; left: 4.375em; top: -7em; margin-bottom: -4.375em; color: white;">
+                        VALUE BOOKS
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <div id="grid-item-3" class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <div id="accessories-container" class="position-relative" style="margin-top: -26.5625em;">
+                <img id="accessories-img" src="./assets/img/img (8).jpeg" alt="Accessories" class="rounded" style="width: 18.75em; height: 43.6875em; object-fit: cover; margin-left: 1.25em; position: relative; top: -9.375em; opacity: 0.9;">
+                <div id="accessories-text" class="position-absolute bottom-0 start-0 text-white" style="padding: 0.625em; left: 2.5em; top: 30.3125em;">
+                    <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 2em; position: relative; color: white; position: relative; left: 1em">
+                        ACCESSORIES
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <div id="grid-item-4" class="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <div class="d-flex flex-column">
+                <div id="future-collection-img-container" class="mb-2 position-relative" style="margin-top: -36.875em;">
+                    <img id="future-collection-img" src="./assets/img/img (2).jpeg" alt="The Future Looks Bright Collection" class="rounded" style="width: 26.5em; height: 26.5em; object-fit: cover; margin-left: -7.5em; position: relative; top: -9.375em; opacity: 0.9;">
+                    <div id="future-collection-text" class="position-absolute bottom-0 start-0 text-white" style="padding: 0.625em;">
+                        <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 2em; position: relative; left: -2.875em; top: 4.625em;">
+                            THE FUTURE LOOKS
+                            <span style="position: relative; top: 0.3125em; left: -0.125em;">BRIGHT COLLECTION</span>
+                        </h4>
+                    </div>
+                </div>
+                <div id="tops-container" class="position-relative">
+                    <img id="tops-img" src="./assets/img/img (9).jpeg" alt="Tops" class="rounded" style="width: 26.5em; height: 26.5em; object-fit: cover; margin-left: -7.5em; margin-top: -3.125em; position: relative; top: -5.625em; opacity: 0.9;">
+                    <div id="tops-text" class="position-absolute bottom-0 start-0 text-white" style="padding: 0.625em;">
+                        <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 2em; position: relative; left: -3.25em; top: 6.75em;">
+                            TOPS
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- NEW ARRIVAL -->
+<div class="container-fluid bg-white py-5">
+    <h1 class="col-md-4 text-left" style="color: #000000; font-family: 'Montserrat', sans-serif; font-size: 4.5em; letter-spacing: 0.05em; margin-left: 5%; margin-top: 1.5em; font-weight: 500; position: relative; top: -1em">
+        NEW ARRIVAL
+    </h1>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card" style="width: 24.177em; height: 28.625em; position: relative; left: -11.5625em;">
+
+                    <img src="./assets/img/img (4).jpeg" class="card-img-top" alt="Card 1">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-family: 'Inter', sans-serif; font-size: 0.9375em; font-weight: bold;">
+                            Army Green Active Short Sleeve
+                        </h5>
+                        <p class="card-text" style="font-weight: 600; font-size: 1em;">
+                            $34.95 <span style="text-decoration: line-through; position: relative; left: 0.75em; color: #9B9B9B">$ 34.95</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 24.177em; height: 28.625em; position: relative; left: -5.625em;">
+
+                    <img src="./assets/img/img (6).jpeg" class="card-img-top" alt="Card 2">
+                    <div class="card-body" style="padding: 1em;">
+                        <h5 class="card-title" style="font-family: 'Inter', sans-serif; font-size: 0.9375em; font-weight: bold;">
+                            Army Green Active Short Sleeve
+                        </h5>
+                        <p class="card-text" style="font-weight: 600; font-size: 1em;">
+                            $34.95 <span style="text-decoration: line-through; position: relative; left: 0.75em; color: #9B9B9B">$ 34.95</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 24.177em; height: 28.625em; position: relative; left: 0.625em;">
+
+                    <img src="./assets/img/img (7).jpeg" class="card-img-top" alt="Card 3">
+                    <div class="card-body" style="padding: 1em;">
+                        <h5 class="card-title" style="font-family: 'Inter', sans-serif; font-size: 0.9375em; font-weight: bold;">
+                            Army Green Active Short Sleeve
+                        </h5>
+                        <p class="card-text" style="font-weight: 600; font-size: 1em;">
+                            $34.95 <span style="text-decoration: line-through; position: relative; left: 0.75em; color: #9B9B9B">$ 34.95</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 24.177em; height: 28.625em; position: relative; left: 6.75em;">
+
+                    <img src="./assets/img/img (10).jpeg" class="card-img-top" alt="Card 4">
+                    <div class="card-body" style="padding: 1em;">
+                        <h5 class="card-title" style="font-family: 'Inter', sans-serif; font-size: 0.9375em; font-weight: bold;">
+                            Army Green Active Short Sleeve
+                        </h5>
+                        <p class="card-text" style="font-weight: 600; font-size: 1em;">
+                            $34.95 <span style="text-decoration: line-through; position: relative; left: 0.75em; color: #9B9B9B">$ 34.95</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Block 4: Future Looks Bright Section -->
+<div class="container-fluid bg-light py-5" id="future-bright-section">
+    <div class="row" id="future-bright-row">
+        <div class="col-lg-6" id="future-bright-text">
+            <h2 id="future-heading" style="color: #272312; font-family: 'Act of Rejection'; margin-left: 15%; margin-top: 0.75em; margin-bottom: 1em; font-size: 7em;">
+                <span id="heading-future" style="display: block;">FUTURE</span>
+                <span id="heading-looks" style="display: block;">LOOKS</span>
+                <span id="heading-bright" style="display: block;">BRIGHT</span>
+            </h2>
+
+            <p id="future-bright-purple" style="font-family: 'Montserrat1'; margin-left: 15%; font-size: 2.5em; margin-bottom: 0.5em; position: relative; top: -2em; font-style:italic">
+                <span style="color: #6F2DA8; font-weight: 600;">PURPLE</span>
+                <span style="color: #272312; font-weight: 200;">&</span>
+            </p>
+
+            <p id="future-bright-gold" style="font-family: 'Montserrat1'; margin-left: 15%; margin-top: -1em; margin-bottom: 2em; position: relative; top: -5.5em; font-style:italic">
+                <span style="color: #E0A408; font-size: 2.5em; font-weight: 600;">GOLD</span>
+                <span style="color: #FFFFFF; text-shadow: 1px 1px 0 #272312, -1px -1px 0 #272312, 1px -1px 0 #272312, -1px 1px 0 #272312; font-size: 2.5em; font-weight: 600; font-style:italic">SERIES</span>
+            </p>
+        </div>
+        <div class="col-lg-6 d-flex justify-content-end align-items-center" id="future-bright-images" style="width: 50%;">
+            <div class="image-wrapper" id="future-image-wrapper" style="position: relative; left: -1%; width: 100%; top: 10%">
+                <div class="image-item" id="future-image-1" style="margin-bottom: 4em;">
+                    <img src="./assets/img/img (1).jpeg" alt="Product 1" class="custom-img rounded" style="width: 170%; height: auto; aspect-ratio: 1 / 1; position: relative; left: -32%; top: -7%">
+                    <div class="image-text" id="future-image-1-text" style="padding: 0.5em; position: relative; top: -5%">
+                        <p style="font-family: Inter; font-weight: 600; font-size: 1em; white-space: nowrap; margin-left: -140%; margin-top: 0; position: relative; left: -140%">FLB Shirt - Purple</p>
+                        <p style="font-family: Inter; font-weight: 600; font-size: 1.1em; white-space: nowrap; margin-top: -0.2em; position: relative; left: -210%; top: 20%">
+                            $ 34.95
+                            <span style="text-decoration: line-through; position: relative; left: 0.5em; color: #9B9B9B">$ 34.95</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="image-item" id="future-image-2">
+                    <img src="./assets/img/img (5).jpeg" alt="Product 2" class="custom-img rounded" style="width: 170%; height: auto; aspect-ratio: 1 / 1; position: relative; left: 10%; top: -6.35%">
+                    <div class="image-text" id="future-image-2-text" style="padding: 0.5em; position: relative; top: -5%">
+                        <p style="font-family: Inter; font-weight: 600; font-size: 1em; white-space: nowrap; margin-left: -140%; margin-top: 0; position: relative; left: -30%">FLB Shirt - Purple</p>
+                        <p style="font-family: Inter; font-weight: 600; font-size: 1.1em; white-space: nowrap; margin-top: -0.2em; position: relative; left: -100%; top: 20%">
+                            $ 34.95
+                            <span style="text-decoration: line-through; position: relative; left: 0.5em; color: #9B9B9B">$ 34.95</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid text-white py-5 position-relative" id="beliefs-section">
+    <h2 class="text-center custom-heading" id="beliefs-heading" style="font-family: Act of Rejection; font-size: 8vw; letter-spacing: 0.025em; margin-bottom: 0; position: relative; z-index: 1; margin-top: 0.5em">
+        WHAT WE BELIEVE
+    </h2>
+
+    <!-- Top-right image -->
+    <img src="./assets/logo/Valuetainment.svg" alt="Top Right" id="beliefs-top-right-img" style="position: absolute; top: 0; right: 0; width: 25%; max-width: 600px; height: auto; z-index: 0; 
+           filter: brightness(0) saturate(100%) invert(11%) sepia(96%) saturate(5769%) hue-rotate(345deg) brightness(90%) contrast(110%) opacity(0.1);">
+
+    <!-- Bottom-right image -->
+    <img src="./assets/img/img (3).png" alt="Bottom Right" id="beliefs-bottom-right-img" style="position: absolute; bottom: -2.5em; right: 0; width: 10%; height: auto; z-index: 0;">
+
+    <div class="container" id="beliefs-container" style="position: relative; top: -3em;">
+        <div class="row" id="beliefs-row">
+            <!-- Left Grid: Photo -->
+            <div class="col-md-6" id="beliefs-left-photo" style="position: relative;">
+                <img src="./assets/img/img (10).png" alt="Left Photo" class="img-fluid" id="beliefs-photo" style="width: 600px; height: 640px; object-fit: cover;">
+            </div>
+
+            <!-- Right Grid: Stacked Boxes with Text -->
+            <div class="col-md-6" id="beliefs-text-right" style="padding-top: 6em;">
+                <!-- Custom Line and Text 1 -->
+                <div id="beliefs-leadership" style="position: relative; margin-top: -2em; border: 0; padding-bottom: 0.5em;">
+                    <span id="leadership-title" style="margin-left: -0.3em; font-family: 'Montserrat', sans-serif; font-size: 2em; font-weight: 400;">Leadership</span>
+                    <span id="leadership-description" style="margin-left: 0.3em; font-family: 'Inter', sans-serif; font-size: 1em; font-weight: 200;"> is vital from the top of corporations to the military to small businesses to parents to students. We all can be leaders.</span>
+                    <hr id="leadership-line" style="border: 0; border-top: 1px solid white; width: 100%; position: relative; left: -0.4em; top: 1em; margin: 1.5em auto;">
+                </div>
+
+                <!-- Custom Line and Text 2 -->
+                <div id="beliefs-entrepreneurs" style="position: relative; margin-top: 1.5em; border: 0; padding-bottom: 0.5em;">
+                    <span id="entrepreneurs-title" style="margin-left: -0.3em; font-family: 'Montserrat', sans-serif; font-size: 2em; font-weight: 400;">Entrepreneurs</span>
+                    <span id="entrepreneurs-description" style="margin-left: 0.3em; font-family: 'Inter', sans-serif; font-size: 1em; font-weight: 200;"> are heroes who should be respected and celebrated for taking risks, launching products, creating jobs, and building companies.</span>
+                    <hr id="entrepreneurs-line" style="border: 0; border-top: 1px solid white; width: 100%; position: relative; left: -0.4em; top: 1em; margin: 1.5em auto;">
+                </div>
+
+                <!-- Custom Line and Text 3 -->
+                <div id="beliefs-capitalism" style="position: relative; margin-top: 1.5em; border: 0; padding-bottom: 0.5em;">
+                    <span id="capitalism-title" style="margin-left: -0.3em; font-family: 'Montserrat', sans-serif; font-size: 2em; font-weight: 400;">Capitalism</span>
+                    <span id="capitalism-description" style="margin-left: 0.3em; font-family: 'Inter', sans-serif; font-size: 1em; font-weight: 200;"> is a critically important economic system that has advanced society and the quality of life we enjoy today.</span>
+                    <hr id="capitalism-line" style="border: 0; border-top: 1px solid white; width: 100%; position: relative; left: -0.4em; margin: 1.5em auto;">
+                </div>
+
+                <!-- Custom Line and Text 4 -->
+                <div id="beliefs-debate" style="position: relative; margin-top: 1.5em; border: 0; padding-bottom: 0.5em;">
+                    <span id="debate-title" style="margin-left: -0.3em; font-family: 'Montserrat', sans-serif; font-size: 2em; font-weight: 400;">Debate</span>
+                    <span id="debate-description" style="margin-left: 0.3em; font-family: 'Inter', sans-serif; font-size: 1em; font-weight: 200;"> is welcome and necessary as it can lead to consensus, epiphanies, and expose the truth. Free speech is critical to productive debate.</span>
+                    <hr id="debate-line" style="border: 0; border-top: 1px solid white; width: 100%; position: relative; left: -0.4em; top: 1em; margin: 1.5em auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid bg-color py-5" id="photos-section">
+    <div class="row">
+        <!-- First Grid: 4 Photos -->
+        <div class="col-md-4" id="photos-grid">
+            <div class="d-flex flex-column align-items-start" style="position: relative; margin-left: 20%; margin-top: 8em;">
+                <!-- Arrow above the first image -->
+                <div class="arrow-up" id="arrow-up-1" style="position: absolute; top: -2em; left: 9%; transform: translateX(-50%);">
+                    &#8593;
+                </div>
+
+                <div class="img-container">
+                    <img src="./assets/img/img (3).jpeg" alt="Photo 1" class="img-fluid mb-2 rounded img-hover-zoom" id="photo-1">
+                </div>
+
+                <div class="img-container">
+                    <img src="./assets/img/img (6).png" alt="Photo 2" class="img-fluid mb-2 rounded img-hover-zoom" id="photo-2">
+                </div>
+
+                <div class="img-container">
+                    <img src="./assets/img/Rectangle 40.png" alt="Photo 3" class="img-fluid mb-2 rounded img-hover-zoom" id="photo-3">
+                </div>
+
+
+                <!-- Arrow below the last image -->
+                <div class="arrow-container" id="arrow-container" style="position: relative; left: 10%;height: 200px;">
+                    <div class="arrow-down" id="arrow-down" style="position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%); font-size: 24px;">
+                        &#8595;
+                    </div>
+                </div>
+
+                <img src="./assets/img/img (4).png" alt="Photo 4" class="img-fluid rounded" id="photo-4" style="width: 100px; height: 100px; position:relative; top: -12em">
+            </div>
+        </div>
+
+        <!-- Second Grid: Large Photo -->
+        <div class="col-md-4 responsive-container" id="large-photo-grid">
+            <img src="./assets/img/img (3).jpeg" alt="Large Photo" class="img-fluid rounded responsive-img" id="large-photo" style="position: relative; left: -15em;">
+        </div>
+
+        <!-- Third Grid: Product Details -->
+        <div class="col-md-4" id="product-details-grid">
+            <div class="product-box" id="product-box" style="background-color: #F6F5F5; padding: 1.25em; margin-top: 2.5em; margin-left: -12em;">
+                <div class="mb-3">
+                    <h3 id="product-title" style="font-family: 'Montserrat', sans-serif; font-weight: 450; font-size: 2.5em;">Premium Valuetainment Leather Backpack</h3>
+                    <p id="product-description" style="font-family: 'Inter', sans-serif; font-size: 1em;">The attention to detail is evident in every aspect of this backpack. From the sturdy hardware and reinforced stitching to the smooth zippers and luxurious lining, no detail has been overlooked.</p>
+                </div>
+
+                <div class="mb-3">
+                    <p>
+                        <span id="price-label" style="font-family: 'Montserrat', sans-serif; font-weight: 450; font-size: 1.5em; color: #272312;">Price:</span>
+                        <span id="price-value" style="font-family: 'Montserrat', sans-serif; font-weight: 450; font-size: 1.5em; color: #EA2127;">$199.95</span>
+                    </p>
+                </div>
+
+                <div class="mt-2" id="size-options" style="font-family: 'Inter', sans-serif; font-size: 1.375em;">
+                    Size:
+                    <span class="d-inline-block size-box" id="size-s" style="font-family: 'Inter', sans-serif;">S</span>
+                    <span class="d-inline-block size-box" id="size-m" style="font-family: 'Inter', sans-serif; margin-left: -0.59em;">M</span>
+                    <span class="d-inline-block size-box" id="size-l" style="font-family: 'Inter', sans-serif; margin-left: -0.7em;">L</span>
+                    <span class="d-inline-block size-box" id="size-xl" style="font-family: 'Inter', sans-serif; margin-left: -0.7em;">XL</span>
+                    <span class="d-inline-block size-box" id="size-xxl" style="font-family: 'Inter', sans-serif; margin-left: -0.725em;">XXL</span>
+                </div>
+
+                <div class="mb-3" id="quantity-container">
+                    <p id="quantity-label" style="font-family: 'Inter', sans-serif; font-size: 1.375em; margin-top: 0.625em;">Quantity:</p>
+                    <div class="d-flex" style="margin-top: 0.3125em;">
+                        <button class="quantity-btn" id="quantity-decrease" style="font-family: 'Inter', sans-serif; font-size: 1.375em; padding: 0.5em; margin-right: 0.3125em;"><span style="position: relative; top: -0.6em; left: -0.125em">-</span></button>
+                        <input type="text" value="1" class="quantity-input" id="quantity-input" style="font-family: 'Inter', sans-serif; font-size: 1.375em; text-align: center; width: 1.5em; margin-right: 0.3125em;">
+                        <button class="quantity-btn" id="quantity-increase" style="font-family: 'Inter', sans-serif; font-size: 1.375em; padding: 0.5em;"><span style="position: relative; top: -0.6em; left: -0.125em">+</span></button>
+                    </div>
+                </div>
+
+                <div class="mb-3" id="action-buttons">
+                    <button class="btn btn-custom-border btn-outline-dark" id="add-to-cart" style="font-family: 'Inter', sans-serif; font-size: 1em; padding: 0.5em 1em;">ADD TO CART</button>
+                    <button class="btn btn-buy-now" id="buy-now" style="font-family: 'Inter', sans-serif; font-size: 1em; padding: 0.5em 1em;">BUY IT NOW</button>
+                </div>
+                <div class="mt-4" id="social-share" style="font-family: 'Inter', sans-serif; font-size: 1.375em; margin-top: 0.625em;">
+                    Share:
+                    <img src="./assets/Icon/facebook (4).svg" alt="facebook" class="icon" id="facebook-icon" style="width: 1.2em; height: auto; margin-right: 0.1em;">
+                    <img src="./assets/Icon/twitter (4).svg" alt="twitter" class="icon" id="twitter-icon" style="width: 1.2em; height: auto; margin-right: 0.1em;">
+                    <img src="./assets/Icon/linkedin (3).svg" alt="linkedin" class="icon" id="linkedin-icon" style="width: 1.2em; height: auto; margin-right: 0.1em;">
+                    <img src="./assets/Icon/instagram-logo (1).svg" alt="instagram" class="icon" id="instagram-icon" style="width: 1.2em; height: auto;">
+                </div>
+
+                <div class="mt-3" id="view-details">
+                    <a href="#" class="view-details" style="font-family: Inter;">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- New Div with Linear Gradient Background -->
+<div class="container-fluid py-5" style="background: linear-gradient(to right, #EC3339, #BB1117);" id="unique-container">
+    <div class="row text-white text-center">
+        <!-- First Grid -->
+        <div class="col-md-3" style="padding: 3em; position: relative; left: -2em;" id="shipping-section">
+            <img src="./assets/icon/delivery.svg" alt="Icon 1" class="img-fluid" style="width: 2.7em; height: 2.6em;" id="icon-shipping">
+            <div class="mt-3" style="font-family: 'Montserrat', sans-serif; font-size: 1.5em; font-weight: 500; margin-left: 2.75em;" id="text-shipping">
+                Shipping
+            </div>
+            <div class="mt-2" style="font-family: 'Inter', sans-serif; font-size: 1em; margin-left: 4.375em;" id="desc-shipping">
+                <span style="display: inline-block; position: relative; left: 30%;">The attention to detail is evident in every</span>
+                <span style="display: inline-block; position: relative; left: 11%;">aspect of this backpack.</span>
+            </div>
+        </div>
+
+        <!-- Second Grid -->
+        <div class="col-md-3" style="padding: 3em; position: relative; left: -5%;" id="return-section">
+            <img src="./assets/icon/exchange.svg" alt="Icon 2" class="img-fluid" style="width: 2.5em; height: 2.5em;" id="icon-return">
+            <div class="mt-3" style="font-family: 'Montserrat', sans-serif; font-size: 1.5em; font-weight: 500; margin-left: 2em;" id="text-return">
+                Return
+            </div>
+            <div class="mt-2" style="font-family: 'Inter', sans-serif; font-size: 1em; margin-left: 4.375em;" id="desc-return">
+                <span style="position: relative; left: 32%;">The attention to detail is evident in every</span>
+                <span style="position: relative; left: 14%;">aspect of this backpack.</span>
+            </div>
+        </div>
+
+        <!-- Third Grid -->
+        <div class="col-md-3" style="padding: 3em; position:relative; left: -5%;" id="support-section">
+            <img src="./assets/icon/customer-support 1.svg" alt="Icon 3" class="img-fluid" style="width: 2.5em; height: 2.5em; position:relative; left: -1.875em;" id="icon-support">
+            <div class="mt-3" style="font-family: 'Montserrat', sans-serif; font-size: 1.5em; font-weight: 500;" id="text-support">
+                Support
+            </div>
+            <div class="mt-2" style="font-family: 'Inter', sans-serif; font-size: 1em; margin-left: 4.375em;" id="desc-support">
+                <span style="position: relative; left: 4.375em;">The attention to detail is evident in every</span>
+                <span style="position: relative; left: 0.625em;">aspect of this backpack.</span>
+            </div>
+        </div>
+
+        <!-- Fourth Grid -->
+        <div class="col-md-3" style="padding: 3em; position: relative; left: -10%;" id="payment-section">
+            <img src="./assets/icon/verified.svg" alt="Icon 4" class="img-fluid" style="width: 2.5em; height: 2.5em; position: relative; left: -2.5em;" id="icon-payment">
+            <div class="mt-3" style="font-family: 'Montserrat', sans-serif; font-size: 1.5em; font-weight: 500;" id="text-payment">
+                Payment
+            </div>
+            <div class="mt-2" style="font-family: 'Inter', sans-serif; font-size: 1em; margin-left: 4.375em;" id="desc-payment">
+                <span style="position: relative; left: 3.75em;">The attention to detail is evident in every</span>
+                <span style="position: relative; left: 0.3125em;">aspect of this backpack.</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- New Div with Black Background -->
+<div class="container-fluid bg-black text-white py-5" id="footer-container">
+    <!-- Upper Part: Logo and VTMERCH Text -->
+    <div class="row align-items-center mb-4" id="logo-section">
+        <div class="col-2">
+            <img src="./assets/Logo/Valuetainment.svg" alt="Logo" style="width: 30%; height: auto; margin-left: 6.5em; filter: invert(22%) sepia(92%) saturate(5600%) hue-rotate(0deg);" id="logo-image">
+        </div>
+        <div class="col-10">
+            <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 6vw; margin-left: -6vw;" id="vtmerch-title">VTMERCH</h1>
+        </div>
+    </div>
+    <!-- Line between Upper and Middle Part -->
+    <hr style="border: 0; border-top: 0.1em solid white; width: 90%; max-width: 100%; position: relative; left: -2em; margin: 0 auto;" id="divider-line">
+
+    <!-- Middle Part: 4 Grids -->
+    <div class="row py-4" id="middle-section">
+        <!-- First Grid: Subscribe -->
+        <div class="col-lg-3" style="margin-left: 5em; margin-top: 2em;" id="subscribe-grid">
+            <h4 style="font-family: 'Montserrat'; font-size: 1.125em;">Subscribe and be the first to receive notifications about our upcoming releases and the latest news.</h4>
+            <input type="email" class="form-control mb-2" placeholder="Enter your email" style="background-color: black; color: white; border: 1px solid white; border-radius: 0.75em; margin-top: 2em;" id="subscribe-input">
+            <button class="btn btn-light" style="width: 100%; font-family: 'Inter'; border-radius: 0.75em;" id="subscribe-button">Subscribe</button>
+        </div>
+        <!-- Second Grid: Customer Services -->
+        <div class="col-lg-3" style="margin-left: 3em; margin-top: 2em; font-family: 'Inter';" id="customer-services-grid">
+            <h4 style="font-family: 'Inter';">Customer Services</h4>
+            <p style="margin-top: 1.875em;">About Us</p>
+            <p style="margin-top: 0.9375em;">Search</p>
+            <p style="margin-top: 0.9375em;">Privacy Policy</p>
+            <p style="margin-top: 0.9375em;">Contact Us</p>
+            <p style="margin-top: 0.9375em;">Terms of Service</p>
+            <p style="margin-top: 0.9375em;">Refund Policy</p>
+            <p style="margin-top: 0.9375em;">Track Order</p>
+        </div>
+        <!-- Third Grid: Products -->
+        <div class="col-lg-3" style="margin-top: 2em; margin-left: -5em; font-family: 'Inter';" id="products-grid">
+            <h4 style="font-size: 1.25em;">Products</h4>
+            <p style="margin-top: 2.1875em;">Featured Products</p>
+            <p style="margin-top: 0.9375em;">Bestseller</p>
+            <p style="margin-top: 0.9375em;">Latest Product</p>
+            <p style="margin-top: 0.9375em;">All Collections</p>
+            <p style="margin-top: 0.9375em;">All Products</p>
+        </div>
+
+        <!-- Fourth Grid: Contact Us -->
+        <div class="col-lg-3" style="margin-top: 2em; margin-left: -7.5em; font-family: 'Inter';" id="contact-us-grid">
+            <h4 style="font-size: 1.25em;">Contact Us</h4>
+            <p style="margin-top: 2.1875em;">Available between 8AM to 8PM. Ready to answer your questions.</p>
+            <p style="margin-top: 0.9375em;"><img src="./assets/Icon/telephone (2) 1.svg" alt="telephone" style="vertical-align: middle;"> 013456789</p>
+            <p style="margin-top: 0.9375em;"><img src="./assets/Icon/email 1.svg" alt="email" style="vertical-align: middle;"> store@valuetainment.com</p>
+            <div class="d-flex gap-2" style="margin-top: 0.9375em;" id="social-icons">
+                <img src="./assets/Icon/facebook (4).svg" alt="facebook" style="vertical-align: middle;">
+                <img src="./assets/Icon/twitter (4).svg" alt="twitter" style="vertical-align: middle;">
+                <img src="./assets/Icon/linkedin (3).svg" alt="linkedin" style="vertical-align: middle;">
+                <img src="./assets/Icon/instagram-logo (1).svg" alt="instagram" style="vertical-align: middle;">
+            </div>
+        </div>
+    </div>
+    <!-- Lower Part: Bottom Section with Icons and Text -->
+    <div class="row mt-4" id="bottom-section">
+        <div class="col-6">
+            <p style="margin-left: 4em; font-family: 'Inter';">© 2024 Valuetainment Store. All rights reserved.</p>
+        </div>
+        <div class="col-6 text-end" style="margin-left: -5.625em;">
+            <img src="./assets/Icon/visa 1.svg" alt="Icon 1" class="payment-icon" style="margin-right: 0.5em;" id="visa-icon">
+            <img src="./assets/Icon/apple-pay 1.svg" alt="Icon 2" class="payment-icon" style="margin-right: 0.5em;" id="apple-pay-icon">
+            <img src="./assets/Icon/diners-club 1.svg" alt="Icon 3" class="payment-icon" style="margin-right: 0.5em;" id="diners-club-icon">
+            <img src="./assets/Icon/visa 1.svg" alt="Icon 4" class="payment-icon" style="margin-right: 0.5em;" id="visa-icon-duplicate">
+            <img src="./assets/Icon/amex 1.svg" alt="Icon 5" class="payment-icon" style="margin-right: 0.5em;" id="amex-icon">
+            <img src="./assets/Icon/paypal 1.svg" alt="Icon 6" class="payment-icon" style="margin-right: 0.5em;" id="paypal-icon">
+            <img src="./assets/Icon/american-express (1) 1.svg" alt="Icon 7" class="payment-icon" id="american-express-icon">
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- conversion till here is done-->
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js "></script>
+<!-- Custom JS (optional) -->
+<script src="script.js "></script>
+</body>
+
+</html>

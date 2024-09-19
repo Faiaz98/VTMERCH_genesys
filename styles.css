@@ -1,0 +1,1538 @@
+/* Basic Reset */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Font Faces */
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./assets/Font/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/Font/Inter/Inter/Inter-VariableFont_opsz\,wght.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Italic';
+    src: url('./assets/Font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf');
+}
+
+
+/* Color Variables */
+
+.bg-danger {
+    background-color: #EA2127 !important;
+}
+
+.bg-gradient {
+    background: linear-gradient(to right, #3B3B3B, #000000);
+    color: white;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.text-white {
+    color: #fff;
+}
+
+
+/* Layout and Positioning */
+
+.container-fluid {
+    background-color: #F6F5F5;
+    padding: 3.75em 0;
+}
+
+.position-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    position: relative;
+    top: -50px;
+}
+
+.image-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-right: 200px;
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Images */
+
+.photo-container img {
+    width: 357px;
+    height: 469px;
+    object-fit: cover;
+}
+
+.photo-container:hover img {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.custom-img {
+    width: 100%;
+    max-width: 496px;
+    height: auto;
+    object-fit: cover;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .photo-container img {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .photo-container img {
+        width: 60vw;
+    }
+}
+
+
+/* Text */
+
+.photo-container p {
+    font-size: 14px;
+    color: white;
+}
+
+.box {
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 2px solid #ffffff;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.image-text {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.view-details {
+    text-decoration: underline;
+    color: #000;
+}
+
+input[type="text"] {
+    padding: 10px;
+}
+
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-add-to-cart {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-white {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+}
+
+.btn-white:hover {
+    background-color: black;
+    color: white;
+}
+
+.size-box,
+.quantity-btn,
+.quantity-input {
+    border: 1px solid #000;
+    text-align: center;
+    cursor: pointer;
+}
+
+.size-box {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 2px;
+    font-size: 14px;
+}
+
+.quantity-btn,
+.quantity-input {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    background-color: #f6f5f5;
+    line-height: 30px;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background-color: #EA2127;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    display: none;
+}
+
+.navbar-toggler::before,
+.navbar-toggler::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    transition: background-color 0.3s;
+}
+
+.navbar-toggler::before {
+    top: 8px;
+}
+
+.navbar-toggler::after {
+    bottom: 8px;
+}
+
+.navbar-toggler span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* Icons */
+
+.fb-icon,
+.twitter-icon,
+.instagram-icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 5px;
+    background-size: cover;
+    background-position: center;
+}
+
+.fb-icon {
+    background-image: url('./assets/Icon/facebook(4).svg');
+}
+
+.twitter-icon {
+    background-image: url('./assets/icons/twitter-icon.png');
+}
+
+.instagram-icon {
+    background-image: url('./assets/icons/instagram-icon.png');
+}
+
+.payment-icon {
+    width: 32px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.payment-icon:first-child {
+    margin-left: 0;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(0deg);
+}
+
+
+/* Arrows */
+
+.arrow-up,
+.arrow-down {
+    font-size: 19.28px;
+    line-height: 10.53px;
+    color: black;
+}
+
+.arrow-up {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow-down {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .arrow-container {
+        height: 150px;
+    }
+    .arrow-down {
+        bottom: -20px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .arrow-container {
+        height: 200px;
+    }
+    .arrow-down {
+        bottom: -25px;
+        font-size: 24px;
+    }
+}
+
+
+/* Responsive Containers */
+
+.responsive-container {
+    margin: 60px auto;
+}
+
+@media (max-width: 768px) {
+    .responsive-container {
+        margin-left: 0;
+    }
+}
+
+
+/* Custom Headings */
+
+.custom-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100px;
+    letter-spacing: 10px;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 1200px) {
+    .custom-heading {
+        font-size: 80px;
+        letter-spacing: 8px;
+    }
+}
+
+@media (max-width: 992px) {
+    .custom-heading {
+        font-size: 60px;
+        letter-spacing: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-heading {
+        font-size: 40px;
+        letter-spacing: 4px;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-heading {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+}
+
+
+/* Animations */
+
+@keyframes fadeInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateIn {
+    0% {
+        opacity: 0;
+        transform: rotate(-200deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInZoom {
+    0% {
+        opacity: 0;
+        transform: translateX(20px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Apply Animations */
+
+.heading-animate {
+    animation: fadeInUp 1s ease-out;
+}
+
+.img-animate {
+    animation: slideInZoom 1s ease-out;
+}
+
+.text-animate {
+    animation: fadeInText 1s ease-out;
+}
+
+.img-animate:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.img-animate:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.img-animate:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.img-animate:nth-child(4) {
+    animation-delay: 1.1s;
+}
+
+#main-heading {
+    animation: fadeInFromBottom 1s ease-out;
+}
+
+#text-container {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+#signed-text {
+    animation: bounceIn 1s ease-out;
+}
+
+#collection-text {
+    animation: bounceIn 1.2s ease-out;
+}
+
+#shop-now-btn {
+    animation: rotateIn 1s ease-out;
+}
+
+#signature-img {
+    animation: fadeInFromBottom 1.5s ease-out;
+}
+
+#image-1-container,
+#image-2-container {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+#image-1,
+#image-2 {
+    animation: bounceIn 1s ease-out;
+}
+
+
+/* Card Styles */
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.card-body {
+    animation: fadeInText 1s ease-out;
+    opacity: 1;
+}
+
+.card:nth-child(1) .card-body {
+    animation-delay: 0.3s;
+}
+
+.card:nth-child(2) .card-body {
+    animation-delay: 0.6s;
+}
+
+.card:nth-child(3) .card-body {
+    animation-delay: 0.9s;
+}
+
+.card:nth-child(4) .card-body {
+    animation-delay: 1.2s;
+}
+
+
+/* Dropdown Menu Styles */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #EA2127;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #c82333;
+}
+
+
+/* Hamburger Menu Styles */
+
+.hamburger-menu {
+    position: relative;
+    left: 8vw;
+}
+
+.hamburger-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar {
+    width: 40px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+
+/* Utility Classes */
+
+.mt-3 {
+    margin-top: 20px;
+}
+
+.mt-2 {
+    margin-top: 10px;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.card-img-top {
+    animation: popIn 1s ease-out;
+}
+
+.btn-outline-light {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* Additional Animations */
+
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Apply Additional Animations */
+
+#quotes-icon {
+    animation: zoomIn 1s ease-out;
+}
+
+#text-container {
+    animation: fadeInFromLeft 1s ease-out;
+}
+
+.text-line {
+    animation: slideUp 1s ease-out;
+}
+
+#main-image {
+    animation: zoomIn 1.5s ease-out;
+}
+
+
+/* General Animation Timing */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* SHOP and COLLECTION Text Animations */
+
+#shop-title {
+    animation: fadeInUp 1s ease-in-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#collection-title {
+    animation: fadeInUp 1.2s ease-in-out;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#view-all-btn {
+    animation: fadeInUp 1.5s ease-in-out;
+    animation-delay: 0.9s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+/* Logo Animation */
+
+#logo-img {
+    animation: fadeInLeft 1.2s ease-in-out;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+/* Image Grid Animations */
+
+#boss-collection-img,
+#headwear-img,
+#value-books-img,
+#accessories-img,
+#future-looks-bright-img,
+#tops-img {
+    animation: scaleUp 1.5s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+/* Collection Title Animations */
+
+#boss-collection-title,
+#headwear-title,
+#value-books-title,
+#accessories-title,
+#future-looks-bright-title,
+#tops-title {
+    animation: fadeInUp 1s ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+/* Image Hover Effect */
+
+#future-image-1 img,
+#future-image-2 img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#future-image-1 img:hover,
+#future-image-2 img:hover {
+    transform: scale(1.05);
+    /* Slightly scale the image on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Add shadow on hover */
+    cursor: pointer;
+    /* Change cursor to pointer */
+}
+
+
+/* Optional: Add hover effect to the image text */
+
+#future-image-1-text p:hover,
+#future-image-2-text p:hover {
+    color: #6F2DA8;
+    /* Change text color on hover */
+    cursor: pointer;
+}
+
+#future-heading,
+#future-image-1,
+#future-image-2 {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#future-bright-section.animate #future-heading,
+#future-bright-section.animate #future-image-1,
+#future-bright-section.animate #future-image-2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* General Section Animation */
+
+#beliefs-section {
+    animation: fadeInSection 1s ease-in-out;
+}
+
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Heading Animation */
+
+#beliefs-heading {
+    animation: slideDownHeading 1.2s ease-out;
+}
+
+@keyframes slideDownHeading {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Left Photo Animation */
+
+#beliefs-photo {
+    animation: fadeInPhoto 1.5s ease-in;
+}
+
+@keyframes fadeInPhoto {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Text Blocks Animation */
+
+#beliefs-leadership,
+#beliefs-entrepreneurs,
+#beliefs-capitalism,
+#beliefs-debate {
+    animation: fadeInText 1s ease-in-out forwards;
+    opacity: 0;
+    /* Initial opacity for animation */
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Delay to each section for staggered animation */
+
+#beliefs-leadership {
+    animation-delay: 0.5s;
+}
+
+#beliefs-entrepreneurs {
+    animation-delay: 0.8s;
+}
+
+#beliefs-capitalism {
+    animation-delay: 1.1s;
+}
+
+#beliefs-debate {
+    animation-delay: 1.4s;
+}
+
+
+/* Top-right and Bottom-right Image Animation */
+
+#beliefs-top-right-img {
+    animation: fadeInImage 2s ease-out;
+}
+
+#beliefs-bottom-right-img {
+    animation: slideUpImage 1.5s ease-out;
+}
+
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUpImage {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* General Section Animation */
+
+#beliefs-section {
+    background: linear-gradient(to right, #3B3B3B, #000000);
+    /* Reintroduced gradient background */
+    animation: fadeInSection 1s ease-in-out;
+}
+
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Heading Animation */
+
+#beliefs-heading {
+    animation: slideDownHeading 1.2s ease-out;
+}
+
+@keyframes slideDownHeading {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Left Photo Animation */
+
+#beliefs-photo {
+    animation: fadeInPhoto 1.5s ease-in;
+}
+
+@keyframes fadeInPhoto {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Text Blocks Animation */
+
+#beliefs-leadership,
+#beliefs-entrepreneurs,
+#beliefs-capitalism,
+#beliefs-debate {
+    animation: fadeInText 1s ease-in-out forwards;
+    opacity: 0;
+    /* Initial opacity for animation */
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Delay to each section for staggered animation */
+
+#beliefs-leadership {
+    animation-delay: 0.5s;
+}
+
+#beliefs-entrepreneurs {
+    animation-delay: 0.8s;
+}
+
+#beliefs-capitalism {
+    animation-delay: 1.1s;
+}
+
+#beliefs-debate {
+    animation-delay: 1.4s;
+}
+
+
+/* Top-right and Bottom-right Image Animation */
+
+#beliefs-top-right-img {
+    animation: fadeInImage 2s ease-out;
+}
+
+#beliefs-bottom-right-img {
+    animation: slideUpImage 1.5s ease-out;
+}
+
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUpImage {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* General Section Animation */
+
+#photos-section {
+    animation: fadeInSection 1s ease-in-out;
+}
+
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Arrow Animations */
+
+#arrow-up-1 {
+    animation: bounceArrow 1.5s infinite;
+}
+
+@keyframes bounceArrow {
+    0%,
+    100% {
+        transform: translateY(-10%);
+    }
+    50% {
+        transform: translateY(10%);
+    }
+}
+
+#arrow-down {
+    animation: bounceArrowDown 1.5s infinite;
+}
+
+@keyframes bounceArrowDown {
+    0%,
+    100% {
+        transform: translateY(10%);
+    }
+    50% {
+        transform: translateY(-10%);
+    }
+}
+
+
+/* Photo Animations */
+
+#photo-1,
+#photo-2,
+#photo-3,
+#photo-4 {
+    animation: fadeInImage 1s ease-in-out;
+}
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#large-photo {
+    animation: zoomInPhoto 1.5s ease-in-out;
+}
+
+@keyframes zoomInPhoto {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Product Box Animation */
+
+#product-box {
+    animation: slideInUp 1s ease-in-out;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Buttons Animation */
+
+#add-to-cart,
+#buy-now {
+    animation: pulseButton 1.5s infinite;
+}
+
+@keyframes pulseButton {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
+/* Social Icons Animation */
+
+#social-share img {
+    animation: spinIcon 2s linear infinite;
+}
+
+@keyframes spinIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* View Details Animation */
+
+#view-details a {
+    animation: hoverEffect 0.5s ease-in-out;
+}
+
+@keyframes hoverEffect {
+    0%,
+    100% {
+        color: #000;
+    }
+    50% {
+        color: #EA2127;
+    }
+}
+
+#unique-container {
+    animation: fadeIn 1s ease-in;
+}
+
+#shipping-section:hover,
+#return-section:hover,
+#support-section:hover,
+#payment-section:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+#shipping-section img,
+#return-section img,
+#support-section img,
+#payment-section img {
+    transition: transform 0.3s;
+}
+
+#shipping-section:hover img,
+#return-section:hover img,
+#support-section:hover img,
+#payment-section:hover img {
+    transform: rotate(15deg);
+}
+
+#footer-container {
+    animation: fadeIn 1s ease-in;
+}
+
+#subscribe-button:hover {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+#contact-us-grid img {
+    transition: transform 0.3s;
+}
+
+#contact-us-grid img:hover {
+    transform: scale(1.1);
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#offerSection {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-heading,
+#sub-heading {
+    text-align: left;
+}
+
+#cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.card {
+    margin: 0.5em;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 991px) {
+    #main-heading {
+        font-size: 2.5em;
+        left: 1em;
+    }
+    #text-container {
+        top: -1.5em;
+        left: 2em;
+    }
+    #signed-text,
+    #collection-text {
+        font-size: 3em;
+    }
+    #shop-now-btn {
+        font-size: 0.875em;
+        left: 2em;
+        top: -5em;
+    }
+    #signature-img {
+        width: 100%;
+        height: auto;
+        left: 0;
+    }
+    #image-1-container,
+    #image-2-container {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    #image-1 {
+        width: 100%;
+        height: auto;
+    }
+    #image-2 {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    #main-heading {
+        font-size: 1.8em;
+        left: 0.5em;
+    }
+    #text-container {
+        top: -1em;
+        left: 1em;
+    }
+    #signed-text,
+    #collection-text {
+        font-size: 2.5em;
+    }
+    #shop-now-btn {
+        font-size: 0.75em;
+        left: 1em;
+        top: -3em;
+    }
+    #signature-img {
+        width: 100%;
+        height: auto;
+        left: 0;
+    }
+    #image-1-container,
+    #image-2-container {
+        width: 100%;
+    }
+    #image-1,
+    #image-2 {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* Add smooth transition for the animation */
+
+.animate__animated {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+/* Define the zoom-in effect on hover */
+
+.img-hover-zoom {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.img-hover-zoom:hover {
+    transform: scale(1.2);
+    /* Adjust zoom level as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Optional: add shadow for better effect */
+}
+
+.img-container {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 60%;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.img-container img#photo-4 {
+    position: relative;
+    top: -100%;
+}
+
+
+/* Hover Effects and Cursor Change */
+
+#shop-collection-section a:hover {
+    cursor: pointer;
+}
+
+#shop-collection-section img:hover {
+    filter: brightness(1.1);
+    /* Slightly brighten images on hover */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+}
+
+#view-all-btn:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    /* Change cursor to pointer */
+}
+
+#view-all-btn:hover #arrow-icon {
+    margin-left: 1.25em;
+    /* Increase margin for a slight "arrow move" effect */
+    transition: margin-left 0.3s ease;
+}
+
+
+/* Basic Animation Styles */
+
+.animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#shop-title,
+#collection-title,
+#view-all-btn,
+#boss-collection-img,
+#headwear-img,
+#value-books-img,
+#accessories-img,
+#future-collection-img,
+#tops-img {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Slight downward offset initially */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
